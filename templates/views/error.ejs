@@ -1,0 +1,22 @@
+<%- include("../partials/header") -%>
+<div class="container">
+    <h1>Error</h1>
+    <p>Please fill in this form correctly.</p>
+    <hr>
+
+    <div>
+        <% if(err.name === "MongoError") { %>
+            <h2>Email-id already Exist. Try again with a different email id.</h2>
+        <% }else if(err.name === "invalidId"){ %>
+            <h2>Invalid Login Details. Try Again!</h2>
+        <% }else{ %>
+            <h2>Passwords not matched. Try Again.</h2>
+        <% } %>
+    </div>
+
+    <hr>
+    <a href="register">Register Here.</a>
+    <hr>
+    <a href="login">Login.</a>
+</div>
+<%- include("../partials/footer") -%>

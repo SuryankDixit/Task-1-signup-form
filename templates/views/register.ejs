@@ -1,0 +1,51 @@
+<%- include("../partials/header") -%>
+<form action="/register" method="post">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      
+      <div class="form-group">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" id="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email">
+    </div>
+
+    <div class="form-group">
+        <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw">
+    </div>
+
+    <div class="form-group">
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw_repeat" id="psw_repeat">
+    </div>
+
+    <div class="form-group">
+      <label for="gender"><b>Gender</b></label>
+      <select name="sex" id="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" required>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="registerbtn">Register</button>
+    </div>
+    </div>
+  
+    <div class="container signin">
+      <p>Already have an account? <a href="login">Sign in</a>.</p>
+    </div>
+  </form>
+<%- include("../partials/footer") -%>
